@@ -1,0 +1,345 @@
+body {
+    background-color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+}
+
+header {
+    background-color: yellow;
+    margin: 0%;
+    width: 100%;
+    height: 100px;
+}
+
+nav {
+    font-size: xx-large;
+    color: white;
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-shrink: 2;
+    position: static;
+    margin: 0%;
+    text-align: end;
+    justify-content: end;
+}
+
+nav:visited {
+    color: darkblue;
+}
+
+nav a:hover {
+    background-color: rgb(0, 155, 252);
+    border-radius: 40px;
+}
+
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 12px 40px;
+    float: left;
+    font-size: x-large;
+}
+
+.toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    border-radius: 10px;
+    display: none;
+    height: 0px;
+    background-color: rgba(255, 255, 255, 0.115);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0.7rem;
+    width: 300px;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu a {
+    padding: 10px 0px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.menu.open {
+    height: 240px;
+    position: absolute;
+    right: 2rem;
+    top: 150px;
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 10;
+}
+
+.menu :hover {
+    background-color: rgb(0, 155, 252);
+    border-radius: 5px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.member2 {
+    margin: 10px;
+    padding: 100px 10px;
+    width: 300px;
+    background-color: yellow;
+    border: lightslategray solid 5px;
+    animation: member2 2s 1s 1 forwards;
+    opacity: 0;
+}
+
+.member1 {
+    margin: 10px;
+    margin: right 20px;
+    padding: 100px 10px;
+    width: 300px;
+    background-color: yellow;
+    border: lightslategray solid 5px;
+    animation: member1 2s 0.5s 1 forwards;
+    opacity: 0;
+}
+
+#member {
+    font-weight: bold;
+}
+
+.image {
+    clip-path: circle(45.9% at 50% 48%);
+    width: 296px;
+    height: 296px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    margin: 0%;
+}
+
+.image2 {
+    clip-path: circle(45.9% at 50% 48%);
+    width: 296px;
+    height: 296px;
+}
+
+.statement {
+    background-color: yellow;
+    margin: 100px 20px;
+    border: #333 solid 5px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.state1 {
+    opacity: 0;
+}
+
+.animate {
+    animation: LtoR 6s 0.9s 1 ease forwards;
+}
+
+.circle1 {
+    position: absolute;
+    left: 32px;
+    top: 107px;
+    width: 280px;
+    height: 280px;
+    background-color: #000;
+    border: #000000 2px solid;
+    border-radius: 50%;
+}
+
+.ok {
+    float: left;
+    z-index: 5;
+}
+
+.state2 {
+    overflow: hidden;
+    float: right;
+    opacity: 0;
+}
+
+.animate2 {
+    animation: RtoL 6s 1s 1 forwards;
+}
+
+.wk {
+    float: right;
+}
+
+p {
+    font-style: italic;
+}
+
+.credits {
+    position: relative;
+    left: 5px;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    position: static;
+    margin: 0%;
+    height: 100px;
+}
+
+#icon {
+    clip-path: circle(48% at 50% 49%);
+}
+
+.icons {
+    width: 100px;
+    color: white;
+    text-align: end;
+    position: absolute;
+    left: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+footer a:hover {
+    color: tomato;
+}
+
+footer a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+.footer {
+    position: relative;
+    top: 70px;
+    right: 2px;
+}
+
+footer a:visited {
+    color: blue;
+}
+
+
+/*Responsiveness*/
+
+@media(max-width: 852px) {
+    .toggle {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 10px;
+    }
+}
+
+@media(max-width:750px) {
+    .team {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(min-width:852px) {
+    .menu.open {
+        display: none;
+    }
+}
+
+@media(max-width:852px) {
+    .bar {
+        display: none;
+    }
+}
+
+@media(max-width:934px) and (min-width:610px) {
+    .icons {
+        position: absolute;
+        left: 300px;
+    }
+}
+
+@media(max-width:610px) and (min-width:455px) {
+    .icons {
+        position: absolute;
+        left: 150px;
+    }
+}
+
+@media(max-width:455px) {
+    .icons {
+        position: absolute;
+        left: 75px;
+    }
+}
+
+
+/*Animation*/
+
+@keyframes member2 {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes member1 {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes LtoR {
+    0% {
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes RtoL {
+    0% {
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

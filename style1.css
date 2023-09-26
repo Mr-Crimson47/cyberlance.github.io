@@ -1,0 +1,368 @@
+        body {
+            background-image: url(image/Background\ Image.jpg);
+            background-size: 100%;
+            background-position: fixed;
+            background-repeat: 1;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: xx-large;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0%;
+        }
+        
+        header {
+            background-color: yellow;
+            margin: 0%;
+            width: 100%;
+            height: 100px;
+        }
+        
+        nav {
+            font-size: xx-large;
+            color: white;
+            background-color: #333;
+            overflow: hidden;
+            display: inline;
+            position: static;
+            margin: 0%;
+        }
+        
+        nav:visited {
+            color: darkblue;
+        }
+        
+        nav a:hover {
+            background-color: rgb(0, 155, 252);
+            border-radius: 40px;
+        }
+        
+        nav a {
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            padding: 12px 40px;
+            float: right;
+        }
+        
+        .toggle {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .menu {
+            display: none;
+            height: 0px;
+            background-color: rgba(255, 255, 255, 0.34);
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 0.7rem;
+            width: 300px;
+            transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .menu a {
+            padding: 10px 0px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        .menu :hover {
+            background-color: rgb(0, 155, 252);
+            border-radius: 5px;
+        }
+        
+        .menu.open {
+            height: 240px;
+            position: absolute;
+            right: 2rem;
+            top: 150px;
+            display: flex;
+            flex-direction: column-reverse;
+            z-index: 10;
+        }
+        
+        .image {
+            padding: top 100px;
+            width: 700px;
+            float: right;
+            align-items: end;
+            justify-content: end;
+            border: 5px solid #333;
+            border: none;
+        }
+        
+        .image2 {
+            margin-left: 31%;
+        }
+        
+        main {
+            padding: 0%;
+            width: 100%;
+        }
+        
+        div {
+            color: white;
+            text-align: left;
+        }
+        
+        ol {
+            margin: 40px;
+            color: white;
+        }
+        
+        ol li {
+            font-weight: bold;
+            text-align: left;
+        }
+        
+        .container {
+            margin-bottom: 750px;
+        }
+        
+        h1 {
+            font-size: 70px;
+            color: black;
+            border: 1px solid white;
+            padding: 0;
+            margin: 0 auto;
+            width: fit-content;
+            height: 5rem;
+            overflow: hidden;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .tag {
+            border-radius: 20px;
+        }
+        
+        .mission {
+            width: 100%;
+            background-color: #3c3c3ce9;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            overflow: hidden;
+            float: right;
+            opacity: 0;
+            animation: mission 2s 0.5s 1 ease forwards;
+        }
+        
+        .reasons {
+            width: 100%;
+            margin: 20px 200px;
+            padding: 40px;
+            background-color: #3c3c3ce9;
+            display: flexbox;
+            flex-wrap: wrap;
+            overflow: hidden;
+            opacity: 0;
+            float: left;
+        }
+        
+        .animate {
+            animation: reasons 2s 0s 1 ease-in-out forwards;
+        }
+        
+        .services {
+            width: 100%;
+            margin: 20px 200px;
+            padding: 40px;
+            background-color: #3c3c3ce9;
+            display: flexbox;
+            flex-wrap: wrap;
+            overflow: hidden;
+            opacity: 0;
+        }
+        
+        .animate2 {
+            animation: services 2s 0s 1 ease-in-out forwards;
+        }
+        
+        .image1 {
+            padding: top 100px;
+            width: 900px;
+            float: right;
+            border: 5px solid #333;
+        }
+        
+        footer {
+            width: 100%;
+            margin-top: auto;
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row-reverse;
+            position: static;
+            margin: 0%;
+            height: 100px;
+        }
+        
+        #icon {
+            clip-path: circle(48% at 50% 49%);
+        }
+        
+        .icons {
+            color: white;
+            text-align: center;
+            width: 100px;
+            position: absolute;
+            left: 600px;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        footer a:hover {
+            color: tomato;
+        }
+        
+        footer a {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+        }
+        
+        .footer {
+            position: relative;
+            top: 70px;
+            right: 2px;
+        }
+        
+        footer a:visited {
+            color: blue;
+        }
+        /*Responsiveness*/
+        
+        @media(max-width:852px) {
+            .toggle {
+                display: flex;
+                flex-direction: row-reverse;
+                margin-right: 10px;
+            }
+        }
+        
+        @media(max-width:852px) {
+            .bar {
+                display: none;
+            }
+        }
+        
+        @media(max-width:500px) {
+            .Tag {
+                width: 400px;
+            }
+        }
+        
+        @media(min-width:500px) and (max-width:1156px) {
+            .Tag {
+                width: 550px;
+            }
+        }
+        
+        @media(min-width:1156px) and (max-width:2000px) {
+            .Tag {
+                width: 700px;
+            }
+        }
+        
+        @media(max-width:500px) {
+            .tag {
+                padding: 0%;
+                margin: 0%;
+            }
+        }
+        
+        @media (min-width:500px) and (max-width:1000px) {
+            .tag {
+                padding: 10px;
+                margin: 10px;
+            }
+        }
+        
+        @media (min-width:1000px) and (max-width:1500px) {
+            .tag {
+                padding: 20px;
+                margin: 20px;
+            }
+        }
+        
+        @media(min-width:1500px) {
+            .tag {
+                width: 1680px;
+                margin: 20px auto;
+                ;
+            }
+        }
+        
+        @media(max-width:450px) {
+            h1 {
+                font-size: 40px;
+                height: fit-content;
+            }
+        }
+        
+        @media(max-width:934px) and (min-width:610px) {
+            .icons {
+                position: absolute;
+                left: 300px;
+            }
+        }
+        
+        @media(max-width:610px) and (min-width:455px) {
+            .icons {
+                position: absolute;
+                left: 150px;
+            }
+        }
+        
+        @media(max-width:455px) {
+            .icons {
+                position: absolute;
+                left: 75px;
+            }
+        }
+        /*animation*/
+        
+        @keyframes mission {
+            0% {
+                transform: translateX(500px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes reasons {
+            0% {
+                transform: translateX(-500px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes services {
+            0% {
+                transform: translateY(250px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
